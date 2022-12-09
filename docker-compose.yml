@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  maria_db:
+    image: mariadb:10.3.36
+    container_name: maria_db
+    environment:
+      MYSQL_DATABASE: db_sales_inventory
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: 5RzQZg9gvX!^c0$f1eLcn
+      MYSQL_ROOT_PASSWORD: 03Q4apIXuwAu86^4ZmoSr
+    volumes:
+      - ./docker/database/mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    

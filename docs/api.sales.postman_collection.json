@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "bcbfda4a-cadc-4735-9b06-6d4cdd8f8afc",
+		"name": "api.sales",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"mobile\",\r\n  \"price\": 1500,\r\n  \"cost\": 900,\r\n  \"stock\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5073/api/v1/Product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5073",
+							"path": [
+								"api",
+								"v1",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5073/api/v1/Product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5073",
+							"path": [
+								"api",
+								"v1",
+								"Product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5073/api/v1/Product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5073",
+							"path": [
+								"api",
+								"v1",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sales",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sub_total\": 1400,\r\n    \"details\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"quantity\": 4\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5193/api/v1/sale",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5193",
+							"path": [
+								"api",
+								"v1",
+								"sale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"status\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5193/api/v1/sale/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5193",
+							"path": [
+								"api",
+								"v1",
+								"sale",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
