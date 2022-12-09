@@ -70,8 +70,9 @@ Construir una solución basada en Microservicios para la gestión de productos d
 * [Base de datos Script SQL](./docs/sql/database.sql)
 * [Base de datos backup](./docs/db_backup.sql)
 
-# Postman Collection
+# Postman 
 
+* [Postman collection](./docs/api.sales.postman_collection.json)
 
 ## Visión general 
 

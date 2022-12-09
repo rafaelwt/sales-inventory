@@ -148,6 +148,92 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "ApiGateway",
+			"item": [
+				{
+					"name": "getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5127/api/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5127",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"ssd\",\r\n  \"price\": 240,\r\n  \"cost\": 150,\r\n  \"stock\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5127/api/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5127",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createSales",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sub_total\": 550,\r\n    \"details\": [\r\n        {\r\n            \"product_id\": 1,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5127/api/v1/sale",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5127",
+							"path": [
+								"api",
+								"v1",
+								"sale"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
